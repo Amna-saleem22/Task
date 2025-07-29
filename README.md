@@ -7,7 +7,7 @@
 This is a responsive frontend application built as a task for the NTS Internship Program (Frontend Developer track). The design focuses on clean UI, user experience, and modern frontend practices.
 
 ## 🚀 Live Link:
-[Click to View Live](https://task-mu-smoky.vercel.app/contact)  
+[Click to View Live](https://task-mu-smoky.vercel.app)  
 *(Replace with your actual live link)*
 
 ## 🛠 Technologies Used:
