@@ -1,79 +1,83 @@
+/* === Contact Section (Modern UI) === */
 .contact-container {
   display: flex;
   flex-wrap: wrap;
-  background: #282727;
-  color: white;
-  font-family: "Anton", sans-serif;
-  padding: 2rem;
-  height: 80%;
-  border-radius: 10px;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c); /* modern dark gradient */
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  gap: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* === Left Section === */
 .contact-left {
   flex: 1;
-  padding: 1rem 2rem;
-  min-width: 280px;
-  margin: 20px;
+  min-width: 300px;
+  max-width: 500px;
 }
-/* 
+
 .contact-tag {
-  background: #737070;
-  color: white;
-  font-family: "Anton", sans-serif;
-  margin-bottom:20px ;
-  padding: 5px 10px;
+  display: inline-block;
+  background: green;
+  color: #000;
+  font-weight: 600;
+  padding: 6px 14px;
   border-radius: 20px;
-  font-size: 20px;
   text-transform: uppercase;
-} */
+  font-size: 14px;
+  letter-spacing: 1px;
+}
 
 .contact-left h2 {
   margin: 1rem 0 0.5rem;
-
-  font-size: 30px;
-    color: white;
-  font-family: "Anton", sans-serif;
-  margin: 1rem 0 0.5rem;
-  font-style: italic;
- }
+  font-size: 36px;
+  font-weight: 600;
+  color: #ffffff;
+}
 
 .contact-left p {
-  font-size: 20px;
-  font-style: italic;
+  font-size: 16px;
+  color: #cccccc;
+  line-height: 1.7;
   margin-bottom: 1rem;
-  font-weight:300;
-  text-align: left;
-  color: #fff;
- 
-} 
+}
 
 .contact-info p {
-  font-size: 20px;
-  font-style: italic;
-  margin-bottom: 1rem;
-  font-weight:300;
-  text-align: left;
-  color: #fff;
+  font-size: 17px;
+  margin-top: 1rem;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+.social-icons {
+  margin-top: 1.5rem;
 }
 
 .social-icons a {
-  margin-right: 10px;
-  color: white;
-  font-size: 30px;
-  transition: color 0.3s ease;
-}
-.social-icons a:hover {
+  margin-right: 15px;
   color: #61dafb;
+  font-size: 28px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
+.social-icons a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* === Right Section (Form) === */
 .contact-right {
   flex: 1;
-  background: #fff;
-  color: #000;
-  padding: 2rem;
-  border-radius: 10px;
-  min-width: 300px;
-  font-size: 20px;
+  background: #ffffff;
+  color: #000000;
+  padding: 2.5rem;
+  border-radius: 16px;
+  min-width: 320px;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
 }
 
 .contact-right form {
@@ -82,50 +86,82 @@
 }
 
 .contact-right label {
+  font-weight: 500;
   margin-top: 1rem;
-  font-weight: 200;
-  font-size: 15px;
+  color: #333;
 }
 
 .contact-right input,
 .contact-right textarea {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 10px;
-  width: 100%;
-  color: black;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+  border-color: green;
+  outline: none;
+  box-shadow: 0 0 6px green(97, 218, 251, 0.6);
 }
 
 .contact-right textarea {
-  height: 100px;
+  height: 120px;
   resize: vertical;
 }
 
 .contact-right button {
   margin-top: 1.5rem;
-  padding: 12px;
-  background: #000;
+  padding: 14px;
+  background: linear-gradient(135deg, #c0fb61, #11cc00);
   color: white;
   border: none;
-  border-radius: 6px;
-  font-weight: 400;
+  border-radius: 10px;
+  font-weight: 600;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
+  transition: all 0.3s ease;
 }
 
 .contact-right button:hover {
-  background: white;
-  color: black;
-  border-radius: 2px solid #000;
-  box-shadow: 0 4px 8px rgba(1, 1, 1, 0.2);
+  background: linear-gradient(135deg, #96cc00, #61fb87);
+  box-shadow: 0 6px 15px rgba(97, 218, 251, 0.4);
 }
-.project h2{
-  color:#000;
-  font-family: "Anton", sans-serif;
+
+/* === Responsive Design === */
+@media (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1rem;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .contact-left h2 {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+
+/* Project heading (unchanged, but adjusted font) */
+.project h2 {
+  color: #000;
+  font-family: "Poppins", sans-serif;
   margin: 2rem 0 0.5rem;
   text-align: center;
-   font-size: 30px;
-  font-style: normal;
+  font-size: 30px;
+  font-weight: 600;
 }

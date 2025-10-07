@@ -21,7 +21,7 @@ export default function GithubProfile() {
   };
 
   return (
-    <div className="container py-5">
+    <div className="container py-5"  style={{ backgroundColor: "#f8f9fa" }}>
       <div className="text-center mb-4">
         <h2 className="fw-bold">My Projects</h2>
         <p className="text-muted">Enter your GitHub username to view profile and projects.</p>

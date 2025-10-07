@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+/* <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000 !important; /* full screen black */
+  font-family: 'Arial', sans-serif;
+   overflow-x: hidden;   /* left-right scroll hatane ke liye */
+  overflow-y: auto; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* App background hata do, ye hi left/right color ka issue kar raha hai */
+.app {
+  background: none !important; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+
+
+
+/* Custom Button */
+.custom-btn {
+  position: relative;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  border: 2px solid #00d084;
+  background-color: transparent;
+  color: #00d084;
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+  max-width: 200px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Default text */
+.custom-btn .default-text {
+  display: inline-block;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
-.App-link {
-  color: #61dafb;
+/* Hover text (hidden by default) */
+.custom-btn .hover-text {
+  position: absolute;
+  top: 100%; /* hidden below */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  color: #00d084;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* On hover: shift Let's Talk up and bring Go Start */
+.custom-btn:hover .default-text {
+  transform: translateY(-150%);
+  opacity: 0;
 }
+
+.custom-btn:hover .hover-text {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+

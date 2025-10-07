@@ -1,0 +1,53 @@
+
+/* About Section */
+.about-section {
+  background: #f9f9f9;
+}
+
+/* Typing animation for title */
+.typing {
+  display: inline-block;
+  border-right: 2px solid #198754;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(15, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #198754; }
+}
+
+.about-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #198754;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Image hover animation */
+.about-img-wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.about-img {
+  transition: transform 0.5s ease, filter 0.3s ease;
+  width: 100%;
+  height: auto;
+}
+
+.about-img:hover {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
