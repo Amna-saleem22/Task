@@ -8,6 +8,7 @@ import Home from './components/Home';
 import Projects from './components/Projects';
 import Service from './components/Service';
 import Contact from './components/Contact';
+
 import './App.css'; // Importing the CSS file for App component
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/service" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/service" element={<Service/>} />
       </Routes>
       <Footer />
     </Router>
